@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import kimai_python
-from kimai_python.models.activity_rate_form import ActivityRateForm  # noqa: E501
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.models.activity_rate_form import ActivityRateForm  # noqa: E501
+from pykimai.rest import ApiException
 
 
 class TestActivityRateForm(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestActivityRateForm(unittest.TestCase):
     def testActivityRateForm(self):
         """Test ActivityRateForm"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = kimai_python.models.activity_rate_form.ActivityRateForm()  # noqa: E501
+        # model = pykimai.models.activity_rate_form.ActivityRateForm()  # noqa: E501
         pass
 
 

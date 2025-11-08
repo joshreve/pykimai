@@ -15,27 +15,28 @@ Method | HTTP request | Description
 Fetch all existing tags
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TagApi(kimai_python.ApiClient(configuration))
-name = 'name_example' # str | Search term to filter tag list (optional)
+api_instance = pykimai.TagApi(pykimai.ApiClient(configuration))
+name = 'name_example'  # str | Search term to filter tag list (optional)
 
 try:
     # Fetch all existing tags
@@ -72,27 +73,28 @@ Name | Type | Description  | Notes
 Delete a tag
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TagApi(kimai_python.ApiClient(configuration))
-id = 56 # int | Tag ID to delete
+api_instance = pykimai.TagApi(pykimai.ApiClient(configuration))
+id = 56  # int | Tag ID to delete
 
 try:
     # Delete a tag
@@ -130,27 +132,28 @@ Creates a new tag
 Creates a new tag and returns it afterwards
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TagApi(kimai_python.ApiClient(configuration))
-body = kimai_python.TagEditForm() # TagEditForm | 
+api_instance = pykimai.TagApi(pykimai.ApiClient(configuration))
+body = pykimai.TagEditForm()  # TagEditForm | 
 
 try:
     # Creates a new tag

@@ -15,16 +15,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import kimai_python
-from kimai_python.api.default_api import DefaultApi  # noqa: E501
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.api.default_api import DefaultApi  # noqa: E501
+from pykimai.rest import ApiException
 
 
 class TestDefaultApi(unittest.TestCase):
     """DefaultApi unit test stubs"""
 
     def setUp(self):
-        self.api = kimai_python.api.default_api.DefaultApi()  # noqa: E501
+        self.api = pykimai.api.default_api.DefaultApi()  # noqa: E501
 
     def tearDown(self):
         pass

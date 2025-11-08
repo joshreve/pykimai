@@ -15,16 +15,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import kimai_python
-from kimai_python.api.team_api import TeamApi  # noqa: E501
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.api.team_api import TeamApi  # noqa: E501
+from pykimai.rest import ApiException
 
 
 class TestTeamApi(unittest.TestCase):
     """TeamApi unit test stubs"""
 
     def setUp(self):
-        self.api = kimai_python.api.team_api.TeamApi()  # noqa: E501
+        self.api = pykimai.api.team_api.TeamApi()  # noqa: E501
 
     def tearDown(self):
         pass

@@ -24,26 +24,27 @@ Method | HTTP request | Description
 Returns the collection of active timesheet records
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TimesheetApi(kimai_python.ApiClient(configuration))
+api_instance = pykimai.TimesheetApi(pykimai.ApiClient(configuration))
 
 try:
     # Returns the collection of active timesheet records
@@ -77,49 +78,54 @@ This endpoint does not need any parameter.
 Returns a collection of timesheet records
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TimesheetApi(kimai_python.ApiClient(configuration))
-user = 'user_example' # str | User ID to filter timesheets. Needs permission 'view_other_timesheet', pass 'all' to fetch data for all user (default: current user) (optional)
-customer = 'customer_example' # str | DEPRECATED: Customer ID to filter timesheets (will be removed with 2.0) (optional)
-customers = 'customers_example' # str | Comma separated list of customer IDs to filter timesheets (optional)
-project = 'project_example' # str | DEPRECATED: Project ID to filter timesheets (will be removed with 2.0) (optional)
-projects = 'projects_example' # str | Comma separated list of project IDs to filter timesheets (optional)
-activity = 'activity_example' # str | DEPRECATED: Activity ID to filter timesheets (will be removed with 2.0) (optional)
-activities = 'activities_example' # str | Comma separated list of activity IDs to filter timesheets (optional)
-page = 'page_example' # str | The page to display, renders a 404 if not found (default: 1) (optional)
-size = 'size_example' # str | The amount of entries for each page (default: 50) (optional)
-tags = 'tags_example' # str | The name of tags which are in the datasets (optional)
-order_by = 'order_by_example' # str | The field by which results will be ordered. Allowed values: id, begin, end, rate (default: begin) (optional)
-order = 'order_example' # str | The result order. Allowed values: ASC, DESC (default: DESC) (optional)
-begin = 'begin_example' # str | Only records after this date will be included (format: HTML5) (optional)
-end = 'end_example' # str | Only records before this date will be included (format: HTML5) (optional)
-exported = 'exported_example' # str | Use this flag if you want to filter for export state. Allowed values: 0=not exported, 1=exported (default: all) (optional)
-active = 'active_example' # str | Filter for running/active records. Allowed values: 0=stopped, 1=active (default: all) (optional)
-full = 'full_example' # str | Allows to fetch fully serialized objects including subresources. Allowed values: true (default: false) (optional)
-term = 'term_example' # str | Free search term (optional)
-modified_after = 'modified_after_example' # str | Only records changed after this date will be included (format: HTML5). Available since Kimai 1.10 and works only for records that were created/updated since then. (optional)
+api_instance = pykimai.TimesheetApi(pykimai.ApiClient(configuration))
+user = 'user_example'  # str | User ID to filter timesheets. Needs permission 'view_other_timesheet', pass 'all' to fetch data for all user (default: current user) (optional)
+customer = 'customer_example'  # str | DEPRECATED: Customer ID to filter timesheets (will be removed with 2.0) (optional)
+customers = 'customers_example'  # str | Comma separated list of customer IDs to filter timesheets (optional)
+project = 'project_example'  # str | DEPRECATED: Project ID to filter timesheets (will be removed with 2.0) (optional)
+projects = 'projects_example'  # str | Comma separated list of project IDs to filter timesheets (optional)
+activity = 'activity_example'  # str | DEPRECATED: Activity ID to filter timesheets (will be removed with 2.0) (optional)
+activities = 'activities_example'  # str | Comma separated list of activity IDs to filter timesheets (optional)
+page = 'page_example'  # str | The page to display, renders a 404 if not found (default: 1) (optional)
+size = 'size_example'  # str | The amount of entries for each page (default: 50) (optional)
+tags = 'tags_example'  # str | The name of tags which are in the datasets (optional)
+order_by = 'order_by_example'  # str | The field by which results will be ordered. Allowed values: id, begin, end, rate (default: begin) (optional)
+order = 'order_example'  # str | The result order. Allowed values: ASC, DESC (default: DESC) (optional)
+begin = 'begin_example'  # str | Only records after this date will be included (format: HTML5) (optional)
+end = 'end_example'  # str | Only records before this date will be included (format: HTML5) (optional)
+exported = 'exported_example'  # str | Use this flag if you want to filter for export state. Allowed values: 0=not exported, 1=exported (default: all) (optional)
+active = 'active_example'  # str | Filter for running/active records. Allowed values: 0=stopped, 1=active (default: all) (optional)
+full = 'full_example'  # str | Allows to fetch fully serialized objects including subresources. Allowed values: true (default: false) (optional)
+term = 'term_example'  # str | Free search term (optional)
+modified_after = 'modified_after_example'  # str | Only records changed after this date will be included (format: HTML5). Available since Kimai 1.10 and works only for records that were created/updated since then. (optional)
 
 try:
     # Returns a collection of timesheet records
-    api_response = api_instance.api_timesheets_get(user=user, customer=customer, customers=customers, project=project, projects=projects, activity=activity, activities=activities, page=page, size=size, tags=tags, order_by=order_by, order=order, begin=begin, end=end, exported=exported, active=active, full=full, term=term, modified_after=modified_after)
+    api_response = api_instance.api_timesheets_get(user=user, customer=customer, customers=customers, project=project,
+                                                   projects=projects, activity=activity, activities=activities,
+                                                   page=page, size=size, tags=tags, order_by=order_by, order=order,
+                                                   begin=begin, end=end, exported=exported, active=active, full=full,
+                                                   term=term, modified_after=modified_after)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TimesheetApi->api_timesheets_get: %s\n" % e)
@@ -170,27 +176,28 @@ Name | Type | Description  | Notes
 Delete an existing timesheet record
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TimesheetApi(kimai_python.ApiClient(configuration))
-id = 56 # int | Timesheet record ID to delete
+api_instance = pykimai.TimesheetApi(pykimai.ApiClient(configuration))
+id = 56  # int | Timesheet record ID to delete
 
 try:
     # Delete an existing timesheet record
@@ -226,27 +233,28 @@ void (empty response body)
 Duplicates an existing timesheet record
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TimesheetApi(kimai_python.ApiClient(configuration))
-id = 56 # int | Timesheet record ID to duplicate
+api_instance = pykimai.TimesheetApi(pykimai.ApiClient(configuration))
+id = 56  # int | Timesheet record ID to duplicate
 
 try:
     # Duplicates an existing timesheet record
@@ -283,27 +291,28 @@ Name | Type | Description  | Notes
 Switch the export state of a timesheet record to (un-)lock it
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TimesheetApi(kimai_python.ApiClient(configuration))
-id = 56 # int | Timesheet record ID to switch export state
+api_instance = pykimai.TimesheetApi(pykimai.ApiClient(configuration))
+id = 56  # int | Timesheet record ID to switch export state
 
 try:
     # Switch the export state of a timesheet record to (un-)lock it
@@ -340,27 +349,28 @@ Name | Type | Description  | Notes
 Returns one timesheet record
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TimesheetApi(kimai_python.ApiClient(configuration))
-id = 56 # int | Timesheet record ID to fetch
+api_instance = pykimai.TimesheetApi(pykimai.ApiClient(configuration))
+id = 56  # int | Timesheet record ID to fetch
 
 try:
     # Returns one timesheet record
@@ -397,28 +407,29 @@ Name | Type | Description  | Notes
 Sets the value of a meta-field for an existing timesheet.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TimesheetApi(kimai_python.ApiClient(configuration))
-id = 56 # int | Timesheet record ID to set the meta-field value for
-body = kimai_python.Body4() # Body4 |  (optional)
+api_instance = pykimai.TimesheetApi(pykimai.ApiClient(configuration))
+id = 56  # int | Timesheet record ID to set the meta-field value for
+body = pykimai.Body4()  # Body4 |  (optional)
 
 try:
     # Sets the value of a meta-field for an existing timesheet.
@@ -458,28 +469,29 @@ Update an existing timesheet record
 Update an existing timesheet record, you can pass all or just a subset of the attributes.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TimesheetApi(kimai_python.ApiClient(configuration))
-body = kimai_python.TimesheetEditForm() # TimesheetEditForm | 
-id = 56 # int | Timesheet record ID to update
+api_instance = pykimai.TimesheetApi(pykimai.ApiClient(configuration))
+body = pykimai.TimesheetEditForm()  # TimesheetEditForm | 
+id = 56  # int | Timesheet record ID to update
 
 try:
     # Update an existing timesheet record
@@ -517,28 +529,29 @@ Name | Type | Description  | Notes
 Restarts a previously stopped timesheet record for the current user
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TimesheetApi(kimai_python.ApiClient(configuration))
-id = 56 # int | Timesheet record ID to restart
-body = kimai_python.Body3() # Body3 |  (optional)
+api_instance = pykimai.TimesheetApi(pykimai.ApiClient(configuration))
+id = 56  # int | Timesheet record ID to restart
+body = pykimai.Body3()  # Body3 |  (optional)
 
 try:
     # Restarts a previously stopped timesheet record for the current user
@@ -576,27 +589,28 @@ Name | Type | Description  | Notes
 Stops an active timesheet record
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TimesheetApi(kimai_python.ApiClient(configuration))
-id = 56 # int | Timesheet record ID to stop
+api_instance = pykimai.TimesheetApi(pykimai.ApiClient(configuration))
+id = 56  # int | Timesheet record ID to stop
 
 try:
     # Stops an active timesheet record
@@ -635,27 +649,28 @@ Creates a new timesheet record
 Creates a new timesheet record for the current user and returns it afterwards.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TimesheetApi(kimai_python.ApiClient(configuration))
-body = kimai_python.TimesheetEditForm() # TimesheetEditForm | 
+api_instance = pykimai.TimesheetApi(pykimai.ApiClient(configuration))
+body = pykimai.TimesheetEditForm()  # TimesheetEditForm | 
 
 try:
     # Creates a new timesheet record
@@ -692,29 +707,30 @@ Name | Type | Description  | Notes
 Returns the collection of recent user activities
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TimesheetApi(kimai_python.ApiClient(configuration))
-user = 'user_example' # str | User ID to filter timesheets. Needs permission 'view_other_timesheet', pass 'all' to fetch data for all user (default: current user) (optional)
-begin = 'begin_example' # str | Only records after this date will be included. Default: today - 1 year (format: HTML5) (optional)
-size = 'size_example' # str | The amount of entries (default: 10) (optional)
+api_instance = pykimai.TimesheetApi(pykimai.ApiClient(configuration))
+user = 'user_example'  # str | User ID to filter timesheets. Needs permission 'view_other_timesheet', pass 'all' to fetch data for all user (default: current user) (optional)
+begin = 'begin_example'  # str | Only records after this date will be included. Default: today - 1 year (format: HTML5) (optional)
+size = 'size_example'  # str | The amount of entries (default: 10) (optional)
 
 try:
     # Returns the collection of recent user activities

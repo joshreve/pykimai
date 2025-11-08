@@ -20,30 +20,31 @@ Method | HTTP request | Description
 Returns a collection of customers
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.CustomerApi(kimai_python.ApiClient(configuration))
-visible = 'visible_example' # str | Visibility status to filter activities (1=visible, 2=hidden, 3=both) (optional)
-order = 'order_example' # str | The result order. Allowed values: ASC, DESC (default: ASC) (optional)
-order_by = 'order_by_example' # str | The field by which results will be ordered. Allowed values: id, name (default: name) (optional)
-term = 'term_example' # str | Free search term (optional)
+api_instance = pykimai.CustomerApi(pykimai.ApiClient(configuration))
+visible = 'visible_example'  # str | Visibility status to filter activities (1=visible, 2=hidden, 3=both) (optional)
+order = 'order_example'  # str | The result order. Allowed values: ASC, DESC (default: ASC) (optional)
+order_by = 'order_by_example'  # str | The field by which results will be ordered. Allowed values: id, name (default: name) (optional)
+term = 'term_example'  # str | Free search term (optional)
 
 try:
     # Returns a collection of customers
@@ -83,27 +84,28 @@ Name | Type | Description  | Notes
 Returns one customer
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.CustomerApi(kimai_python.ApiClient(configuration))
-id = 'id_example' # str | 
+api_instance = pykimai.CustomerApi(pykimai.ApiClient(configuration))
+id = 'id_example'  # str | 
 
 try:
     # Returns one customer
@@ -140,28 +142,29 @@ Name | Type | Description  | Notes
 Sets the value of a meta-field for an existing customer
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.CustomerApi(kimai_python.ApiClient(configuration))
-id = 56 # int | Customer record ID to set the meta-field value for
-body = kimai_python.Body1() # Body1 |  (optional)
+api_instance = pykimai.CustomerApi(pykimai.ApiClient(configuration))
+id = 56  # int | Customer record ID to set the meta-field value for
+body = pykimai.Body1()  # Body1 |  (optional)
 
 try:
     # Sets the value of a meta-field for an existing customer
@@ -201,28 +204,29 @@ Update an existing customer
 Update an existing customer, you can pass all or just a subset of all attributes
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.CustomerApi(kimai_python.ApiClient(configuration))
-body = kimai_python.CustomerEditForm() # CustomerEditForm | 
-id = 56 # int | Customer ID to update
+api_instance = pykimai.CustomerApi(pykimai.ApiClient(configuration))
+body = pykimai.CustomerEditForm()  # CustomerEditForm | 
+id = 56  # int | Customer ID to update
 
 try:
     # Update an existing customer
@@ -260,27 +264,28 @@ Name | Type | Description  | Notes
 Returns a collection of all rates for one customer
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.CustomerApi(kimai_python.ApiClient(configuration))
-id = 56 # int | The customer whose rates will be returned
+api_instance = pykimai.CustomerApi(pykimai.ApiClient(configuration))
+id = 56  # int | The customer whose rates will be returned
 
 try:
     # Returns a collection of all rates for one customer
@@ -317,28 +322,29 @@ Name | Type | Description  | Notes
 Adds a new rate to a customer
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.CustomerApi(kimai_python.ApiClient(configuration))
-id = 56 # int | The customer to add the rate for
-body = kimai_python.CustomerRateForm() # CustomerRateForm | 
+api_instance = pykimai.CustomerApi(pykimai.ApiClient(configuration))
+id = 56  # int | The customer to add the rate for
+body = pykimai.CustomerRateForm()  # CustomerRateForm | 
 
 try:
     # Adds a new rate to a customer
@@ -376,28 +382,29 @@ Name | Type | Description  | Notes
 Deletes one rate for an customer
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.CustomerApi(kimai_python.ApiClient(configuration))
-id = 56 # int | The customer whose rate will be removed
-rate_id = 56 # int | The rate to remove
+api_instance = pykimai.CustomerApi(pykimai.ApiClient(configuration))
+id = 56  # int | The customer whose rate will be removed
+rate_id = 56  # int | The rate to remove
 
 try:
     # Deletes one rate for an customer
@@ -436,27 +443,28 @@ Creates a new customer
 Creates a new customer and returns it afterwards
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.CustomerApi(kimai_python.ApiClient(configuration))
-body = kimai_python.CustomerEditForm() # CustomerEditForm | 
+api_instance = pykimai.CustomerApi(pykimai.ApiClient(configuration))
+body = pykimai.CustomerEditForm()  # CustomerEditForm | 
 
 try:
     # Creates a new customer

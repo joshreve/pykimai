@@ -23,9 +23,9 @@ import tempfile
 import six
 from six.moves.urllib.parse import quote
 
-from kimai_python.configuration import Configuration
-import kimai_python.models
-from kimai_python import rest
+from pykimai.configuration import Configuration
+import pykimai.models
+from pykimai import rest
 
 
 class ApiClient(object):
@@ -266,7 +266,7 @@ class ApiClient(object):
             if klass in self.NATIVE_TYPES_MAPPING:
                 klass = self.NATIVE_TYPES_MAPPING[klass]
             else:
-                klass = getattr(kimai_python.models, klass)
+                klass = getattr(pykimai.models, klass)
 
         if klass in self.PRIMITIVE_TYPES:
             return self.__deserialize_primitive(data, klass)

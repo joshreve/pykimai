@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import kimai_python
-from kimai_python.models.timesheet_entity import TimesheetEntity  # noqa: E501
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.models.timesheet_entity import TimesheetEntity  # noqa: E501
+from pykimai.rest import ApiException
 
 
 class TestTimesheetEntity(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestTimesheetEntity(unittest.TestCase):
     def testTimesheetEntity(self):
         """Test TimesheetEntity"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = kimai_python.models.timesheet_entity.TimesheetEntity()  # noqa: E501
+        # model = pykimai.models.timesheet_entity.TimesheetEntity()  # noqa: E501
         pass
 
 

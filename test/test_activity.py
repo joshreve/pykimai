@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import kimai_python
-from kimai_python.models.activity import Activity  # noqa: E501
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.models.activity import Activity  # noqa: E501
+from pykimai.rest import ApiException
 
 
 class TestActivity(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestActivity(unittest.TestCase):
     def testActivity(self):
         """Test Activity"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = kimai_python.models.activity.Activity()  # noqa: E501
+        # model = pykimai.models.activity.Activity()  # noqa: E501
         pass
 
 

@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import kimai_python
-from kimai_python.models.tag_edit_form import TagEditForm  # noqa: E501
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.models.tag_edit_form import TagEditForm  # noqa: E501
+from pykimai.rest import ApiException
 
 
 class TestTagEditForm(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestTagEditForm(unittest.TestCase):
     def testTagEditForm(self):
         """Test TagEditForm"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = kimai_python.models.tag_edit_form.TagEditForm()  # noqa: E501
+        # model = pykimai.models.tag_edit_form.TagEditForm()  # noqa: E501
         pass
 
 

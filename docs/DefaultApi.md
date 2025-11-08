@@ -16,26 +16,27 @@ Method | HTTP request | Description
 Returns the user specific locale configuration
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.DefaultApi(kimai_python.ApiClient(configuration))
+api_instance = pykimai.DefaultApi(pykimai.ApiClient(configuration))
 
 try:
     # Returns the user specific locale configuration
@@ -69,26 +70,27 @@ This endpoint does not need any parameter.
 Returns the timesheet configuration
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.DefaultApi(kimai_python.ApiClient(configuration))
+api_instance = pykimai.DefaultApi(pykimai.ApiClient(configuration))
 
 try:
     # Returns the timesheet configuration
@@ -122,26 +124,27 @@ This endpoint does not need any parameter.
 A testing route for the API
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.DefaultApi(kimai_python.ApiClient(configuration))
+api_instance = pykimai.DefaultApi(pykimai.ApiClient(configuration))
 
 try:
     # A testing route for the API
@@ -174,26 +177,27 @@ void (empty response body)
 Returns information about the Kimai release
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.DefaultApi(kimai_python.ApiClient(configuration))
+api_instance = pykimai.DefaultApi(pykimai.ApiClient(configuration))
 
 try:
     # Returns information about the Kimai release

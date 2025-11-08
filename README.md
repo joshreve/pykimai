@@ -22,8 +22,9 @@ pip install git+https://github.com/kbancerz/kimai-python.git
 (you may need to run `pip` with root permission: `sudo pip install git+https://github.com/kbancerz/kimai-python.git`)
 
 Then import the package:
+
 ```python
-import kimai_python 
+import pykimai 
 ```
 
 ### Setuptools
@@ -36,8 +37,9 @@ python setup.py install --user
 (or `sudo python setup.py install` to install the package for all users)
 
 Then import the package:
+
 ```python
-import kimai_python
+import pykimai
 ```
 
 ## Getting Started
@@ -47,23 +49,23 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.ActivityApi(kimai_python.ApiClient(configuration))
+api_instance = pykimai.ActivityApi(pykimai.ApiClient(configuration))
 project = 'project_example' # str | Project ID to filter activities (optional)
 projects = 'projects_example' # str | Comma separated list of project IDs to filter activities (optional)
 visible = 'visible_example' # str | Visibility status to filter activities. Allowed values: 1=visible, 2=hidden, 3=all (default: 1) (optional)

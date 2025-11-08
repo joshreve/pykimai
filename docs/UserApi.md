@@ -17,30 +17,31 @@ Method | HTTP request | Description
 Returns the collection of all registered users
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.UserApi(kimai_python.ApiClient(configuration))
-visible = 'visible_example' # str | Visibility status to filter users. Allowed values: 1=visible, 2=hidden, 3=all (default: 1) (optional)
-order_by = 'order_by_example' # str | The field by which results will be ordered. Allowed values: id, username, alias, email (default: username) (optional)
-order = 'order_example' # str | The result order. Allowed values: ASC, DESC (default: ASC) (optional)
-term = 'term_example' # str | Free search term (optional)
+api_instance = pykimai.UserApi(pykimai.ApiClient(configuration))
+visible = 'visible_example'  # str | Visibility status to filter users. Allowed values: 1=visible, 2=hidden, 3=all (default: 1) (optional)
+order_by = 'order_by_example'  # str | The field by which results will be ordered. Allowed values: id, username, alias, email (default: username) (optional)
+order = 'order_example'  # str | The result order. Allowed values: ASC, DESC (default: ASC) (optional)
+term = 'term_example'  # str | Free search term (optional)
 
 try:
     # Returns the collection of all registered users
@@ -80,27 +81,28 @@ Name | Type | Description  | Notes
 Return one user entity
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.UserApi(kimai_python.ApiClient(configuration))
-id = 56 # int | User ID to fetch
+api_instance = pykimai.UserApi(pykimai.ApiClient(configuration))
+id = 56  # int | User ID to fetch
 
 try:
     # Return one user entity
@@ -139,28 +141,29 @@ Update an existing user
 Update an existing user, you can pass all or just a subset of all attributes (passing roles will replace all existing ones)
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.UserApi(kimai_python.ApiClient(configuration))
-body = kimai_python.UserEditForm() # UserEditForm | 
-id = 56 # int | User ID to update
+api_instance = pykimai.UserApi(pykimai.ApiClient(configuration))
+body = pykimai.UserEditForm()  # UserEditForm | 
+id = 56  # int | User ID to update
 
 try:
     # Update an existing user
@@ -198,26 +201,27 @@ Name | Type | Description  | Notes
 Return the current user entity
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.UserApi(kimai_python.ApiClient(configuration))
+api_instance = pykimai.UserApi(pykimai.ApiClient(configuration))
 
 try:
     # Return the current user entity
@@ -253,27 +257,28 @@ Creates a new user
 Creates a new user and returns it afterwards
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.UserApi(kimai_python.ApiClient(configuration))
-body = kimai_python.UserCreateForm() # UserCreateForm | 
+api_instance = pykimai.UserApi(pykimai.ApiClient(configuration))
+body = pykimai.UserCreateForm()  # UserCreateForm | 
 
 try:
     # Creates a new user

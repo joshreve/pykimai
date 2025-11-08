@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import kimai_python
-from kimai_python.models.user_create_form import UserCreateForm  # noqa: E501
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.models.user_create_form import UserCreateForm  # noqa: E501
+from pykimai.rest import ApiException
 
 
 class TestUserCreateForm(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestUserCreateForm(unittest.TestCase):
     def testUserCreateForm(self):
         """Test UserCreateForm"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = kimai_python.models.user_create_form.UserCreateForm()  # noqa: E501
+        # model = pykimai.models.user_create_form.UserCreateForm()  # noqa: E501
         pass
 
 

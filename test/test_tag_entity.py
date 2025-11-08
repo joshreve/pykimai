@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import kimai_python
-from kimai_python.models.tag_entity import TagEntity  # noqa: E501
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.models.tag_entity import TagEntity  # noqa: E501
+from pykimai.rest import ApiException
 
 
 class TestTagEntity(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestTagEntity(unittest.TestCase):
     def testTagEntity(self):
         """Test TagEntity"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = kimai_python.models.tag_entity.TagEntity()  # noqa: E501
+        # model = pykimai.models.tag_entity.TagEntity()  # noqa: E501
         pass
 
 

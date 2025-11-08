@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import kimai_python
-from kimai_python.models.team_entity import TeamEntity  # noqa: E501
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.models.team_entity import TeamEntity  # noqa: E501
+from pykimai.rest import ApiException
 
 
 class TestTeamEntity(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestTeamEntity(unittest.TestCase):
     def testTeamEntity(self):
         """Test TeamEntity"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = kimai_python.models.team_entity.TeamEntity()  # noqa: E501
+        # model = pykimai.models.team_entity.TeamEntity()  # noqa: E501
         pass
 
 

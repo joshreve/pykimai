@@ -23,26 +23,27 @@ Method | HTTP request | Description
 Fetch all existing teams
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TeamApi(kimai_python.ApiClient(configuration))
+api_instance = pykimai.TeamApi(pykimai.ApiClient(configuration))
 
 try:
     # Fetch all existing teams
@@ -76,28 +77,29 @@ This endpoint does not need any parameter.
 Revokes access for a customer from a team
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TeamApi(kimai_python.ApiClient(configuration))
-id = 56 # int | The team whose permission will be revoked
-customer_id = 56 # int | The customer to remove (Customer ID)
+api_instance = pykimai.TeamApi(pykimai.ApiClient(configuration))
+id = 56  # int | The team whose permission will be revoked
+customer_id = 56  # int | The customer to remove (Customer ID)
 
 try:
     # Revokes access for a customer from a team
@@ -135,28 +137,29 @@ Name | Type | Description  | Notes
 Grant the team access to a customer
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TeamApi(kimai_python.ApiClient(configuration))
-id = 56 # int | The team that is granted access
-customer_id = 56 # int | The customer to grant acecess to (Customer ID)
+api_instance = pykimai.TeamApi(pykimai.ApiClient(configuration))
+id = 56  # int | The team that is granted access
+customer_id = 56  # int | The customer to grant acecess to (Customer ID)
 
 try:
     # Grant the team access to a customer
@@ -194,27 +197,28 @@ Name | Type | Description  | Notes
 Delete a team
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TeamApi(kimai_python.ApiClient(configuration))
-id = 56 # int | Team ID to delete
+api_instance = pykimai.TeamApi(pykimai.ApiClient(configuration))
+id = 56  # int | Team ID to delete
 
 try:
     # Delete a team
@@ -250,27 +254,28 @@ void (empty response body)
 Returns one team
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TeamApi(kimai_python.ApiClient(configuration))
-id = 'id_example' # str | 
+api_instance = pykimai.TeamApi(pykimai.ApiClient(configuration))
+id = 'id_example'  # str | 
 
 try:
     # Returns one team
@@ -307,28 +312,29 @@ Name | Type | Description  | Notes
 Removes a member from the team
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TeamApi(kimai_python.ApiClient(configuration))
-id = 56 # int | The team from which the member will be removed
-user_id = 56 # int | The team member to remove (User ID)
+api_instance = pykimai.TeamApi(pykimai.ApiClient(configuration))
+id = 56  # int | The team from which the member will be removed
+user_id = 56  # int | The team member to remove (User ID)
 
 try:
     # Removes a member from the team
@@ -366,28 +372,29 @@ Name | Type | Description  | Notes
 Add a new member to a team
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TeamApi(kimai_python.ApiClient(configuration))
-id = 56 # int | The team which will receive the new member
-user_id = 56 # int | The team member to add (User ID)
+api_instance = pykimai.TeamApi(pykimai.ApiClient(configuration))
+id = 56  # int | The team which will receive the new member
+user_id = 56  # int | The team member to add (User ID)
 
 try:
     # Add a new member to a team
@@ -427,28 +434,29 @@ Update an existing team
 Update an existing team, you can pass all or just a subset of all attributes (passing users will replace all existing ones)
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TeamApi(kimai_python.ApiClient(configuration))
-body = kimai_python.TeamEditForm() # TeamEditForm | 
-id = 56 # int | Team ID to update
+api_instance = pykimai.TeamApi(pykimai.ApiClient(configuration))
+body = pykimai.TeamEditForm()  # TeamEditForm | 
+id = 56  # int | Team ID to update
 
 try:
     # Update an existing team
@@ -486,28 +494,29 @@ Name | Type | Description  | Notes
 Revokes access for a project from a team
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TeamApi(kimai_python.ApiClient(configuration))
-id = 56 # int | The team whose permission will be revoked
-project_id = 56 # int | The project to remove (Project ID)
+api_instance = pykimai.TeamApi(pykimai.ApiClient(configuration))
+id = 56  # int | The team whose permission will be revoked
+project_id = 56  # int | The project to remove (Project ID)
 
 try:
     # Revokes access for a project from a team
@@ -545,28 +554,29 @@ Name | Type | Description  | Notes
 Grant the team access to a project
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TeamApi(kimai_python.ApiClient(configuration))
-id = 56 # int | The team that is granted access
-project_id = 56 # int | The project to grant acecess to (Project ID)
+api_instance = pykimai.TeamApi(pykimai.ApiClient(configuration))
+id = 56  # int | The team that is granted access
+project_id = 56  # int | The project to grant acecess to (Project ID)
 
 try:
     # Grant the team access to a project
@@ -606,27 +616,28 @@ Creates a new team
 Creates a new team and returns it afterwards
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.TeamApi(kimai_python.ApiClient(configuration))
-body = kimai_python.TeamEditForm() # TeamEditForm | 
+api_instance = pykimai.TeamApi(pykimai.ApiClient(configuration))
+body = pykimai.TeamEditForm()  # TeamEditForm | 
 
 try:
     # Creates a new team

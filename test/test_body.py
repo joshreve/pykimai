@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import kimai_python
-from kimai_python.models.body import Body  # noqa: E501
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.models.body import Body  # noqa: E501
+from pykimai.rest import ApiException
 
 
 class TestBody(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestBody(unittest.TestCase):
     def testBody(self):
         """Test Body"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = kimai_python.models.body.Body()  # noqa: E501
+        # model = pykimai.models.body.Body()  # noqa: E501
         pass
 
 

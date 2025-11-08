@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import kimai_python
-from kimai_python.models.timesheet_edit_form import TimesheetEditForm  # noqa: E501
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.models.timesheet_edit_form import TimesheetEditForm  # noqa: E501
+from pykimai.rest import ApiException
 
 
 class TestTimesheetEditForm(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestTimesheetEditForm(unittest.TestCase):
     def testTimesheetEditForm(self):
         """Test TimesheetEditForm"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = kimai_python.models.timesheet_edit_form.TimesheetEditForm()  # noqa: E501
+        # model = pykimai.models.timesheet_edit_form.TimesheetEditForm()  # noqa: E501
         pass
 
 

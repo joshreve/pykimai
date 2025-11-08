@@ -58,7 +58,7 @@ class Configuration(object):
 
         # Logging Settings
         self.logger = {}
-        self.logger["package_logger"] = logging.getLogger("kimai_python")
+        self.logger["package_logger"] = logging.getLogger("pykimai")
         self.logger["urllib3_logger"] = logging.getLogger("urllib3")
         # Log format
         self.logger_format = '%(asctime)s %(levelname)s %(message)s'
@@ -233,7 +233,7 @@ class Configuration(object):
                 {
                     'type': 'api_key',
                     'in': 'header',
-                    'key': 'X-AUTH-TOKEN',
+                    'key': 'Authorization',
                     'value': self.get_api_key_with_prefix('X-AUTH-TOKEN')
                 },
             'apiUser':

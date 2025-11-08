@@ -20,38 +20,41 @@ Method | HTTP request | Description
 Returns a collection of activities
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.ActivityApi(kimai_python.ApiClient(configuration))
-project = 'project_example' # str | Project ID to filter activities (optional)
-projects = 'projects_example' # str | Comma separated list of project IDs to filter activities (optional)
-visible = 'visible_example' # str | Visibility status to filter activities. Allowed values: 1=visible, 2=hidden, 3=all (default: 1) (optional)
-globals = 'globals_example' # str | Use if you want to fetch only global activities. Allowed values: true (default: false) (optional)
-globals_first = 'globals_first_example' # str | Deprecated parameter, value is not used any more (optional)
-order_by = 'order_by_example' # str | The field by which results will be ordered. Allowed values: id, name, project (default: name) (optional)
-order = 'order_example' # str | The result order. Allowed values: ASC, DESC (default: ASC) (optional)
-term = 'term_example' # str | Free search term (optional)
+api_instance = pykimai.ActivityApi(pykimai.ApiClient(configuration))
+project = 'project_example'  # str | Project ID to filter activities (optional)
+projects = 'projects_example'  # str | Comma separated list of project IDs to filter activities (optional)
+visible = 'visible_example'  # str | Visibility status to filter activities. Allowed values: 1=visible, 2=hidden, 3=all (default: 1) (optional)
+globals = 'globals_example'  # str | Use if you want to fetch only global activities. Allowed values: true (default: false) (optional)
+globals_first = 'globals_first_example'  # str | Deprecated parameter, value is not used any more (optional)
+order_by = 'order_by_example'  # str | The field by which results will be ordered. Allowed values: id, name, project (default: name) (optional)
+order = 'order_example'  # str | The result order. Allowed values: ASC, DESC (default: ASC) (optional)
+term = 'term_example'  # str | Free search term (optional)
 
 try:
     # Returns a collection of activities
-    api_response = api_instance.api_activities_get(project=project, projects=projects, visible=visible, globals=globals, globals_first=globals_first, order_by=order_by, order=order, term=term)
+    api_response = api_instance.api_activities_get(project=project, projects=projects, visible=visible, globals=globals,
+                                                   globals_first=globals_first, order_by=order_by, order=order,
+                                                   term=term)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ActivityApi->api_activities_get: %s\n" % e)
@@ -91,27 +94,28 @@ Name | Type | Description  | Notes
 Returns one activity
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.ActivityApi(kimai_python.ApiClient(configuration))
-id = 56 # int | Activity ID to fetch
+api_instance = pykimai.ActivityApi(pykimai.ApiClient(configuration))
+id = 56  # int | Activity ID to fetch
 
 try:
     # Returns one activity
@@ -148,28 +152,29 @@ Name | Type | Description  | Notes
 Sets the value of a meta-field for an existing activity
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.ActivityApi(kimai_python.ApiClient(configuration))
-id = 56 # int | Activity record ID to set the meta-field value for
-body = kimai_python.Body() # Body |  (optional)
+api_instance = pykimai.ActivityApi(pykimai.ApiClient(configuration))
+id = 56  # int | Activity record ID to set the meta-field value for
+body = pykimai.Body()  # Body |  (optional)
 
 try:
     # Sets the value of a meta-field for an existing activity
@@ -209,28 +214,29 @@ Update an existing activity
 Update an existing activity, you can pass all or just a subset of all attributes
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.ActivityApi(kimai_python.ApiClient(configuration))
-body = kimai_python.ActivityEditForm() # ActivityEditForm | 
-id = 56 # int | Activity ID to update
+api_instance = pykimai.ActivityApi(pykimai.ApiClient(configuration))
+body = pykimai.ActivityEditForm()  # ActivityEditForm | 
+id = 56  # int | Activity ID to update
 
 try:
     # Update an existing activity
@@ -268,27 +274,28 @@ Name | Type | Description  | Notes
 Returns a collection of all rates for one activity
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.ActivityApi(kimai_python.ApiClient(configuration))
-id = 56 # int | The activity whose rates will be returned
+api_instance = pykimai.ActivityApi(pykimai.ApiClient(configuration))
+id = 56  # int | The activity whose rates will be returned
 
 try:
     # Returns a collection of all rates for one activity
@@ -325,28 +332,29 @@ Name | Type | Description  | Notes
 Adds a new rate to an activity
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.ActivityApi(kimai_python.ApiClient(configuration))
-id = 56 # int | The activity to add the rate for
-body = kimai_python.ActivityRateForm() # ActivityRateForm | 
+api_instance = pykimai.ActivityApi(pykimai.ApiClient(configuration))
+id = 56  # int | The activity to add the rate for
+body = pykimai.ActivityRateForm()  # ActivityRateForm | 
 
 try:
     # Adds a new rate to an activity
@@ -384,28 +392,29 @@ Name | Type | Description  | Notes
 Deletes one rate for an activity
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.ActivityApi(kimai_python.ApiClient(configuration))
-id = 56 # int | The activity whose rate will be removed
-rate_id = 56 # int | The rate to remove
+api_instance = pykimai.ActivityApi(pykimai.ApiClient(configuration))
+id = 56  # int | The activity whose rate will be removed
+rate_id = 56  # int | The rate to remove
 
 try:
     # Deletes one rate for an activity
@@ -444,27 +453,28 @@ Creates a new activity
 Creates a new activity and returns it afterwards
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.ActivityApi(kimai_python.ApiClient(configuration))
-body = kimai_python.ActivityEditForm() # ActivityEditForm | 
+api_instance = pykimai.ActivityApi(pykimai.ApiClient(configuration))
+body = pykimai.ActivityEditForm()  # ActivityEditForm | 
 
 try:
     # Creates a new activity

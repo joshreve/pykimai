@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import kimai_python
-from kimai_python.models.project_collection import ProjectCollection  # noqa: E501
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.models.project_collection import ProjectCollection  # noqa: E501
+from pykimai.rest import ApiException
 
 
 class TestProjectCollection(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestProjectCollection(unittest.TestCase):
     def testProjectCollection(self):
         """Test ProjectCollection"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = kimai_python.models.project_collection.ProjectCollection()  # noqa: E501
+        # model = pykimai.models.project_collection.ProjectCollection()  # noqa: E501
         pass
 
 

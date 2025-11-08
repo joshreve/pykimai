@@ -18,7 +18,7 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 
-from kimai_python.api_client import ApiClient
+from pykimai.api_client import ApiClient
 
 
 class TeamApi(object):

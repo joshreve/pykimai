@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import kimai_python
-from kimai_python.models.version import Version  # noqa: E501
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.models.version import Version  # noqa: E501
+from pykimai.rest import ApiException
 
 
 class TestVersion(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestVersion(unittest.TestCase):
     def testVersion(self):
         """Test Version"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = kimai_python.models.version.Version()  # noqa: E501
+        # model = pykimai.models.version.Version()  # noqa: E501
         pass
 
 

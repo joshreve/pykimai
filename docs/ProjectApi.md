@@ -20,39 +20,42 @@ Method | HTTP request | Description
 Returns a collection of projects.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.ProjectApi(kimai_python.ApiClient(configuration))
-customer = 'customer_example' # str | Customer ID to filter projects (optional)
-customers = 'customers_example' # str | Comma separated list of customer IDs to filter projects (optional)
-visible = 'visible_example' # str | Visibility status to filter projects. Allowed values: 1=visible, 2=hidden, 3=both (default: 1) (optional)
-start = 'start_example' # str | Only projects that started before this date will be included. Allowed format: HTML5 (default: now, if end is also empty) (optional)
-end = 'end_example' # str | Only projects that ended after this date will be included. Allowed format: HTML5 (default: now, if start is also empty) (optional)
-ignore_dates = 'ignore_dates_example' # str | If set, start and end are completely ignored. Allowed values: 1 (default: off) (optional)
-order = 'order_example' # str | The result order. Allowed values: ASC, DESC (default: ASC) (optional)
-order_by = 'order_by_example' # str | The field by which results will be ordered. Allowed values: id, name, customer (default: name) (optional)
-term = 'term_example' # str | Free search term (optional)
+api_instance = pykimai.ProjectApi(pykimai.ApiClient(configuration))
+customer = 'customer_example'  # str | Customer ID to filter projects (optional)
+customers = 'customers_example'  # str | Comma separated list of customer IDs to filter projects (optional)
+visible = 'visible_example'  # str | Visibility status to filter projects. Allowed values: 1=visible, 2=hidden, 3=both (default: 1) (optional)
+start = 'start_example'  # str | Only projects that started before this date will be included. Allowed format: HTML5 (default: now, if end is also empty) (optional)
+end = 'end_example'  # str | Only projects that ended after this date will be included. Allowed format: HTML5 (default: now, if start is also empty) (optional)
+ignore_dates = 'ignore_dates_example'  # str | If set, start and end are completely ignored. Allowed values: 1 (default: off) (optional)
+order = 'order_example'  # str | The result order. Allowed values: ASC, DESC (default: ASC) (optional)
+order_by = 'order_by_example'  # str | The field by which results will be ordered. Allowed values: id, name, customer (default: name) (optional)
+term = 'term_example'  # str | Free search term (optional)
 
 try:
     # Returns a collection of projects.
-    api_response = api_instance.api_projects_get(customer=customer, customers=customers, visible=visible, start=start, end=end, ignore_dates=ignore_dates, order=order, order_by=order_by, term=term)
+    api_response = api_instance.api_projects_get(customer=customer, customers=customers, visible=visible, start=start,
+                                                 end=end, ignore_dates=ignore_dates, order=order, order_by=order_by,
+                                                 term=term)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->api_projects_get: %s\n" % e)
@@ -93,27 +96,28 @@ Name | Type | Description  | Notes
 Returns one project
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.ProjectApi(kimai_python.ApiClient(configuration))
-id = 'id_example' # str | 
+api_instance = pykimai.ProjectApi(pykimai.ApiClient(configuration))
+id = 'id_example'  # str | 
 
 try:
     # Returns one project
@@ -150,28 +154,29 @@ Name | Type | Description  | Notes
 Sets the value of a meta-field for an existing project
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.ProjectApi(kimai_python.ApiClient(configuration))
-id = 56 # int | Project record ID to set the meta-field value for
-body = kimai_python.Body2() # Body2 |  (optional)
+api_instance = pykimai.ProjectApi(pykimai.ApiClient(configuration))
+id = 56  # int | Project record ID to set the meta-field value for
+body = pykimai.Body2()  # Body2 |  (optional)
 
 try:
     # Sets the value of a meta-field for an existing project
@@ -211,28 +216,29 @@ Update an existing project
 Update an existing project, you can pass all or just a subset of all attributes
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.ProjectApi(kimai_python.ApiClient(configuration))
-body = kimai_python.ProjectEditForm() # ProjectEditForm | 
-id = 56 # int | Project ID to update
+api_instance = pykimai.ProjectApi(pykimai.ApiClient(configuration))
+body = pykimai.ProjectEditForm()  # ProjectEditForm | 
+id = 56  # int | Project ID to update
 
 try:
     # Update an existing project
@@ -270,27 +276,28 @@ Name | Type | Description  | Notes
 Returns a collection of all rates for one project
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.ProjectApi(kimai_python.ApiClient(configuration))
-id = 56 # int | The project whose rates will be returned
+api_instance = pykimai.ProjectApi(pykimai.ApiClient(configuration))
+id = 56  # int | The project whose rates will be returned
 
 try:
     # Returns a collection of all rates for one project
@@ -327,28 +334,29 @@ Name | Type | Description  | Notes
 Adds a new rate to an project
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.ProjectApi(kimai_python.ApiClient(configuration))
-id = 56 # int | The project to add the rate for
-body = kimai_python.ProjectRateForm() # ProjectRateForm | 
+api_instance = pykimai.ProjectApi(pykimai.ApiClient(configuration))
+id = 56  # int | The project to add the rate for
+body = pykimai.ProjectRateForm()  # ProjectRateForm | 
 
 try:
     # Adds a new rate to an project
@@ -386,28 +394,29 @@ Name | Type | Description  | Notes
 Deletes one rate for an project
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.ProjectApi(kimai_python.ApiClient(configuration))
-id = 56 # int | The project whose rate will be removed
-rate_id = 56 # int | The rate to remove
+api_instance = pykimai.ProjectApi(pykimai.ApiClient(configuration))
+id = 56  # int | The project whose rate will be removed
+rate_id = 56  # int | The rate to remove
 
 try:
     # Deletes one rate for an project
@@ -446,27 +455,28 @@ Creates a new project
 Creates a new project and returns it afterwards
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import kimai_python
-from kimai_python.rest import ApiException
+import pykimai
+from pykimai.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: apiToken
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-TOKEN'] = 'Bearer'
 # Configure API key authorization: apiUser
-configuration = kimai_python.Configuration()
+configuration = pykimai.Configuration()
 configuration.api_key['X-AUTH-USER'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-AUTH-USER'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = kimai_python.ProjectApi(kimai_python.ApiClient(configuration))
-body = kimai_python.ProjectEditForm() # ProjectEditForm | 
+api_instance = pykimai.ProjectApi(pykimai.ApiClient(configuration))
+body = pykimai.ProjectEditForm()  # ProjectEditForm | 
 
 try:
     # Creates a new project
